@@ -13,6 +13,7 @@
 \usepackage{csquotes}
 \usepackage{appendix}
 \usepackage{pdfpages}
+\usepackage{float}
 
 \begin{document}
 
@@ -26,7 +27,7 @@
 	
 	Das entsprechende Übungsblatt befindet sich im Anhang \ref{uebungsblatt1}.
 	
-	\section{Aufgabe 1:}
+	\section{Aufgabe 1: Vollständige Induktion}
 	Beweisen Sie mit vollständiger Induktion: Für alle $ n \in N $ gilt:
 	\begin{enumerate}
 	\item $ 5^n - 1 $ ist durch 4 teilbar.
@@ -79,6 +80,35 @@
 			\{a_3\}, \{a_1,a_3\}, \{a_2,a_3\}, \{a_1,a_2,a_3\} $.
 		\end{itemize}
 	\end{enumerate}
+
+\section{Aufgabe 2: Indirekter Beweis}
+
+Es seien $ a_1,\dots, a_m \in N $. Beweisen Sie: Gilt für ein $n \in N $
+\begin{equation}
+\prod^{m}_{i=1}(1+a_i) > 2^m,\text{so folgt} \sum^{m}_{i=1}a_i > n.
+\end{equation}
+
+	\subsection{Lösung Lerngruppe \enquote{HenriLibre, du?, du?, du?}}
+	Indirekt: z.z. für $ a_1, \ldots, a_n \text{ mit } n \in N$ gilt\\
+	\begin{equation}
+	\prod^{m}_{i=1}(1+a_i) > 2^m,\text{so folgt} \sum^{m}_{i=1}a_i > n.
+	\end{equation}
+	Exkurs \enquote{Indirekter Beweis}: $(A \Rightarrow B) \Leftrightarrow (\neg B \Rightarrow \neg A)$:
+	
+	\begin{table}[H]
+		\center
+		\begin{tabular}{c | c | c | c | c }
+		 \# & A & B & A $\Rightarrow B $ & $ \neg B \Rightarrow \neg A $ \\
+		 \hline
+		 1 & f & f & w & w \\
+		 2 & f & w & w & w \\
+		 3 & w & f & f & f \\
+		 4 & w & w & w & w \\
+		\end{tabular}
+		\caption{ In der dritten Zeile steht der Indirekter Beweis}
+		\end{table}
+		
+	Zunächst zeigen wir $ (1+k) \leq 2^k $ ~~ $ \forall k \in N$
 
 \appendices
 	\chapter{}
