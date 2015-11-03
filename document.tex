@@ -33,7 +33,7 @@
 	Das entsprechende Übungsblatt befindet sich im Anhang \ref{uebungsblatt1} \footnote{\href{https://analysis3.files.wordpress.com/2015/08/blatt1.pdf}{https://analysis3.files.wordpress.com/2015/08/blatt1.pdf}}.
 
 \newpage		
-\section{Übungsblatt1, Aufgabe 1: Vollständige Induktion, \GruppeA}
+\section{Übungsblatt1, Aufgabe 1: Vollständige Induktion, 4 Punkte, \GruppeA}
 	
 	\begin{enumerate}
 	\item Z.~z.: $5^n - 1 | 4 $ 
@@ -95,7 +95,7 @@
 	\end{enumerate}
 
 \newpage
-\section{Übungsblatt 1, Aufgabe 2: Indirekter Beweis, \GruppeA}
+\section{Übungsblatt 1, Aufgabe 2: Indirekter Beweis, 4 Punkte, \GruppeA}
 		
 	Zeige zunächst: $ (1+k) \leq 2^k $ ~~ $ \forall k \in N$
 	\begin{itemize}
@@ -162,12 +162,12 @@
 			\end{flalign*}
 	\end{itemize}
 \newpage
-\section{Übungsblatt 1, Aufgabe 3: Vollständige Induktion, \GruppeA}
+\section{Übungsblatt 1, Aufgabe 3: Vollständige Induktion, 4 Punkte, \GruppeA}
 
 	\begin{enumerate}
 		\item Z.~z. dass das Brett mit \enquote{L}-förmigen Kartonstücken überdecken.
 		\begin{itemize}
-			\item Induktionsanker:
+			\item Iinduktionsanfang:
 				\begin{table}[H]
 					\centering
 					\begin{tabular}{|c|c|c|c|}
@@ -228,7 +228,7 @@
 	\item Aus dem ersten Aufgabenteil folgt nicht, dass der Beweis für diesen Aufgabenteil. Viel mehr ist der erste Teil ein Spezialfall von diesem Aufgabenteil.\\
 	Z.~z.: $ 3|2^{2n}-1$
 	\begin{itemize}
-		\item Induktionsanker:
+		\item Iinduktionsanfang:
 		\begin{flalign*}
 			n_1 = 1:~~ & 2^{2\cdot 1} - 1 = 3  ~~\checkmark &\\
 			n_2 = 2:~~ & 2^{2\cdot 2} - 1 = 15 ~~\checkmark &\\
@@ -251,7 +251,7 @@
 	\end{enumerate}
 
 \newpage
-\section{Übungsblatt 1, Aufgabe 4: Vollständige Induktion, \GruppeA}
+\section{Übungsblatt 1, Aufgabe 4: Vollständige Induktion, 4 Punkte, \GruppeA}
 Der Fehler in dem Induktionsverwis liegt im Folgenden: Innerhalb des Induktionsschrittes nimmt die Induktionan, dass die Induktionsannahme gleich der Behauptung, also wahr, ist. Dieser Schritt ist jedoch fehlerhaft, da nie bewiesen wurde, on jede Aussage wahr ist. Da man von einer falschen Aussage auf sowohl wahre als auch falsche Aussage schließen kann, fehlt daher ein Berweis, dass die Induktionsanname wahr ist. Ein Gegenbeweis wäre z.~B. für $n=2$.
 
 \newpage
@@ -259,8 +259,50 @@ Der Fehler in dem Induktionsverwis liegt im Folgenden: Innerhalb des Induktionss
 
 Stand 2015-10-29: Noch nicht bekannt gegeben
 
+\chapter*{Übungsblatt 2}
+
+	Das entsprechende Übungsblatt befindet sich im Anhang \ref{uebungsblatt2} \footnote{\href{https://analysis3.files.wordpress.com/2015/08/blatt-2.pdf}{https://analysis3.files.wordpress.com/2015/08/blatt-21.pdf}}.
+	
+	\newpage		
+	\section{Übungsblatt 2, Aufgabe 1: Konvergenz von Reihen, 4 Punkte, \GruppeA}
+	
+	\begin{enumerate}
+		\item Z.z. $ \forall n \in N $
+		\begin{itemize}
+			\item Induktionsanfang:
+			\begin{flalign*}
+			\sum^{n}_{k=1} \frac{1}{k(k+1)} & = 1 - \frac{1}{n+1} & \\
+			n = 1: ~~  \frac{1}{1(1+1)} = 1 - \frac{1}{1+1} & \Leftrightarrow \frac{1}{2} = \frac{1}{2} & \\
+			n = 2: ~~  \frac{1}{2(2+1)} = 1 - \frac{1}{2+1} & \Leftrightarrow \frac{2}{3} = \frac{2}{3} & 
+			\end{flalign*}
+			\item Induktionsvoraussetzung:
+			\begin{flalign*}
+			\sum^{n}_{k=1} \frac{1}{k(k+1)} & = 1 - \frac{1}{(n+1)}
+			\end{flalign*}
+			\item Induktionsschritt:
+			\begin{flalign*}
+			n \mapsto n+1: ~~ & \sum^{n+1}_{k=1} \frac{1}{k(k+1)} = 1 - \frac{1}{((n+1)+1)} = 1 - \frac{1}{(n+2)} & \\
+			& \overset{\text{I.V.}}{=} 1 - \frac{1}{n+1} + \frac{1}{(n+1)(n+2)} & \\
+			& = \frac{(n+1)(n+2)-(n+2)+1}{(n+1)(n+2)} & \\
+			& = \frac{(n+1)(n+2)-n-1}{(n+1)(n+2)} & \\
+			& = \frac{(n+1)(n+2)-(n+1)}{(n+1)(n+2)} & \\
+			& = \frac{(n+1)(n+2)}{(n+1)(n+2)} - \frac{(n+1)}{(n+1)(n+2)} & \\
+			& = 1 - \frac{1}{(n+2)} & \square
+			\end{flalign*}
+		\end{itemize}
+		\item Z.z. $ \forall n \in N $
+		\begin{flalign*}
+			\sum^{n}_{k=1} k^3 = \frac{n^2(n+1)^2}{4}
+		\end{flalign*}
+	\end{enumerate}	
+	\section{Übungsblatt2, Aufgabe 2: Kombinatorik, 4 Punkte, \GruppeA}
+	\section{Übungsblatt2, Aufgabe 3: Konvergenz von Reihen, 4 Punkte, \GruppeA}
+	\section{Übungsblatt2, Aufgabe 4: , 4 Punkte, \GruppeA}
+
 \appendices
 	\chapter{}
 	\section{Übungsblatt 1}\label{uebungsblatt1}
 	\includepdf[pages=-]{blatt1}
+	\section{Übungsblatt 2}\label{uebungsblatt2}
+	\includepdf[pages=-]{blatt2}
 \end{document}
