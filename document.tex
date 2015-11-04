@@ -309,9 +309,45 @@ Stand 2015-10-29: Noch nicht bekannt gegeben
 			\end{flalign*}
 		\end{itemize}
 	\end{enumerate}	
-	\section{Übungsblatt2, Aufgabe 2: Kombinatorik, 4 Punkte, \GruppeA}
-	\section{Übungsblatt2, Aufgabe 3: Konvergenz von Reihen, 4 Punkte, \GruppeA}
-	\section{Übungsblatt2, Aufgabe 4: , 4 Punkte, \GruppeA}
+	\section{Übungsblatt 2, Aufgabe 2: Kombinatorik, 4 Punkte, \GruppeA}
+	\begin{flalign*}
+		n = 3: ~~ & (1,1,1) & \Rightarrow p(3) = 1 \\
+		n = 4: ~~ & (2,1,1), (1,1,2), (1,2,1) & \Rightarrow p(4) = 3 \\
+		n = 5: ~~ & (3,1,1), (1,1,3), (1,3,1), & \Rightarrow p(5) = 6 \\
+		& (2,1,2), (2,2,1), (1,2,2) & \\
+		n = 6: ~~ & (4,1,1), (1,4,1), (1,1,4), & \Rightarrow p(6) = 10 \\
+		& (3,2,1), (3,1,2), (2,1,3), (2,3,1), (1,2,3), (1,3,2), & \\
+		& (2,2,2) & \\
+		n = 7: ~~ & (5,1,1), (1,5,1), (1,1,5), & \Rightarrow p(7) = 15 \\
+		& (4,1,2), (4,2,1), (2,4,1), (2,1,4), (1,2,4),(1,4,2), & \\
+		& (3,3,1), (3,1,3), (1,3,3) & \\
+		& (2,2,3), (2,3,2), (3,2,2) &
+	\end{flalign*}
+	\begin{flalign*}
+		& p(3)=1 & \\ 
+		& p(4)=p(3)+2 = p(3) + (4-2) = 3  & \\
+		& p(5)=p(4) + (5-2) = 6 & \\
+		& p(6)=p(5) + (6-2) = 10 & \\
+		& p(7)=p(6) + (7-2) = 15
+	\end{flalign*}
+	Nebenbemerkung: Die Zahlenreihe $1, 3, 6, 10, 15 $ erinnert an die Dreieckszahlen des Pascal'schen Dreiecks mit der Formel $ \Delta (n) = \binom{n+1}{2}$ - das führt hier leider nicht weiter. Strukturbetrachtung: 
+	\begin{flalign*}
+		& p(n)=p(n-1)+(n-2) = \sum^n_{k=3}(k-2) \overset{\text{Gauß'sche Summenformel}}{=} \frac{(n-1)(n-2)}{2} & \\
+		& n > 517: p(n) > 132870 & 
+	\end{flalign*}
+	Induktiver Beweis der obigen Struktur:\\
+	Z.z. $p(3) = 1 $. 
+	\begin{itemize}
+		\item Induktionsanfang: \\
+		Dies stimmt, weil die einzige Möglichkeit 3 als Summe dreier natürlicher Zahlen ($k_1, k_2, k_3$) zu schreiben, ist $k_1=k_2=k_3=1: (1,1,1)$.
+		\item Induktionsvoraussetzung: \\
+		Für $n$ gelte $p(n) = 1+2+\ldots+(n-2)$
+		\item Induktionsschritt: \\
+		Z.z. ist jetzt $p(n+1) = 1+2+\ldots+(n-1) = p(n)+(n-1)$. Dazu müssen wir die Möglichkeiten $(n+1)$ als Summe dreier natürlicher Zahlen zu schreiben, \enquote{zählen}. Zunächts betrachten wir alle Möglichkeiten, $n$ als solche Summe zu schreiben indem wir für jede dieser Möglichkeiten $k_1$ um 1 erhöhen und $k_2, k_3$ halten. Nun ist zu zeigen, dass für alle bisher aufgeführten Möglichkeiten stets $k_1 \neq 1$ galt und dies weiterhin alle solchen Möglichkeiten sind. Um die verbliebenden Möglichkeiten $(n+1)$ als Zahlen darzustellen müssen sie in der Form $(1, k_2, k_3)$ sein. D.h. $k_2+k_3 = n$. Hierfür gibt es lediglich die Möglichkeiten $(1, 1, n-1), \ldots, (1,2,n-2),\ldots \text{bis } (1,n-2,2),(1,n-1,1)$. Also genau $n-1$ Stück und dies war zu zeigen. 
+	\end{itemize}
+
+	\section{Übungsblatt 2, Aufgabe 3: Konvergenz von Reihen, 4 Punkte, \GruppeA}
+	\section{Übungsblatt 2, Aufgabe 4: , 4 Punkte, \GruppeA}
 
 \appendices
 	\chapter{}
