@@ -15,6 +15,9 @@
 \usepackage{pdfpages}
 \usepackage{float}
 
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+
 \usepackage[weather]{ifsym}
 
 \begin{document}
@@ -407,6 +410,77 @@ Stand 2015-10-29: Noch nicht bekannt gegeben
 		Binomischer Lehrsatz: $(a+b)^n = \sum_{k=0}^{n}\binom{n}{k}a^kb^{n-k}$
 		und das sieht aus wie $(n^1+1)^{p+1}$ - grob.
 	\end{itemize}
+
+	\chapter*{Übungsblatt 3}
+		Das entsprechende Übungsblatt befindet sich im Anhang \ref{uebungsblatt1} \footnote{\href{https://analysis3.files.wordpress.com/2015/08/blatt-3.pdf}{https://analysis3.files.wordpress.com/2015/08/blatt-3.pdf}}.
+
+	\newpage		
+	\section{Übungsblatt1, Aufgabe 1:, 4 Punkte, \GruppeA}
+	\begin{itemize}
+		\item $(-a)(-b)=ab $ für alle $a,b \in R$.
+		\begin{flalign*}
+			\overset{\text{Assoziativ}}{\Leftrightarrow}& (-1\cdot a)(-1 \cdot b) = ab & \\
+			\overset{\text{Distributiv}}{\Leftrightarrow}& (-1)(-1)(a)(b) = ab & \\
+			\overset{\text{}}{\Leftrightarrow}& (1)(ab) = ab & \\
+			\overset{\text{neutrales Element}}{\Leftrightarrow}& ab = ab & \square
+		\end{flalign*}
+		\item Aus $ax=b$ und $ay=b$ folgt $x=y$, falls $a,b,x,y  \in R, a \neq 0$
+		\begin{flalign*}
+			& \overset{\text{für b einsetzen}}{\Rightarrow} ax = ay & \\
+			& \Leftrightarrow x=y & \square
+		\end{flalign*}
+		Wäre $ a=0$, führe die Annulierungsregel zu $ 0 = 0 $.
+	\end{itemize}
+	\newpage		
+	\section{Übungsblatt1, Aufgabe 2:, 4 Punkte, \GruppeA}
+	\begin{flalign*}
+		a.) & \abs{\frac{x+4}{x-2}} < x, x \in R & \\
+		& \text{Fall 1: } x = 2: \text{Division durch 0}, L=\{\} & \\
+		& \text{Fall 2: } x < 2: \text{Negativer Divisor} \ldots & \\
+		& \text{Fall 2.1: } x < 2 ~ \land ~ x = -4 : \text{Negativer Divisor, 0 Dividend}, \nleq x, L=\{\} & \\
+		& \text{Fall 2.2: } x < 2 ~ \land ~ x < -4 : \text{Negativer Divisor, negativer Dividend}, \nleq x, L=\{\} & \\
+		& \text{Fall 2.2: } x < 2 ~ \land ~ x > -4 : \text{Negativer Divisor, positiver Dividend}, \nleq x, L=\{\} &\\
+		& \text{Fall 3: } x > 2: \text{positiver Divisor \ldots} & \\
+		& \text{Fall 3.1: } x > 2 ~ \land ~ x < -4:\text{\Lightning}, L=\{\} & \\
+		& \text{Fall 3.2: } x > 2 ~ \land ~ x = -4:, \text{\Lightning}, L=\{\} & \\
+		& \text{Fall 3.3: } x > 2 ~ \land ~ x > -4: \text{positiver Divisor, positiver Divident}, < x, L=\{x|x > 4\}& \\
+		& \Rightarrow L=\{x \in R |x > 4\} %& \\
+%		& \text{oder} & \\
+%		& \text{Fall 1: Sei } \abs{\frac{x+4}{x-2}} < x  &\\
+%		& \Rightarrow \frac{x+4}{x-2} < x & \\
+%		& \Leftrightarrow x+4 > x(x-2) & \\
+%		& \Leftrightarrow 0 > x^2-2x-x-4 & \\
+%		& \Leftrightarrow 0 > x^2-3x-4 & \\
+%		& \Leftrightarrow 0 > (x+1)(x-4) &\\
+%		& \text{Linke Seite (Erster Term <1, zweiter Term kleiner 0) insgesamt kleiner 0, also linke Seite \Lightning rechte Seite } 
+	\end{flalign*}
+	\begin{flalign*}
+		b.) & \abs{x-a}+\abs{x-b}\leq b-a, \text{ wobei } a \leq b & \\
+		& \text{Fall 1: } a \leq b < 0 & \\
+		& \text{Fall 1.1: } a = b < 0 & \\
+		& \Rightarrow x+a + x+a \leq 0 & \\
+		& \Leftrightarrow 2x \leq 2a & \\
+	\end{flalign*}
+	\newpage		
+	\section{Übungsblatt1, Aufgabe 3:, 4 Punkte, \GruppeA}
+	
+	\begin{enumerate}
+		\item 
+		\begin{flalign*}
+			a.) & \frac{1}{x-\abs{x+1} < 2} & \\
+			b.) & \abs{\abs{x-1} - 4} < 2  & \\
+		\end{flalign*}
+		\item 
+		\begin{flalign*}
+			a.) & \frac{r}{1+r} < \frac{s}{1+s} \text{, für } r,s \in R \text{ mit } 0 \leq r < s & \\
+			b.) & \frac{x+y}{1+\abs{x+y}} \leq \frac{\abs{x}}{1+\abs{x} + \frac{\abs{y}}{1+\abs{y}}} , \text{für alle } x,y \in R
+		\end{flalign*}
+	\end{enumerate}
+	
+	\newpage		
+	\section{Übungsblatt1, Aufgabe 4:, 4 Punkte, \GruppeA}
+	
+
 
 \appendices
 	\chapter{}
