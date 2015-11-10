@@ -415,7 +415,7 @@ Stand 2015-10-29: Noch nicht bekannt gegeben
 		Das entsprechende Übungsblatt befindet sich im Anhang \ref{uebungsblatt1} \footnote{\href{https://analysis3.files.wordpress.com/2015/08/blatt-3.pdf}{https://analysis3.files.wordpress.com/2015/08/blatt-3.pdf}}.
 
 	\newpage		
-	\section{Übungsblatt1, Aufgabe 1:, 4 Punkte, \GruppeA}
+	\section{Übungsblatt 3, Aufgabe 1:, 4 Punkte, \GruppeA}
 	\begin{itemize}
 		\item $(-a)(-b)=ab $ für alle $a,b \in R$.
 		\begin{flalign*}
@@ -426,15 +426,22 @@ Stand 2015-10-29: Noch nicht bekannt gegeben
 		\end{flalign*}
 		\item Aus $ax=b$ und $ay=b$ folgt $x=y$, falls $a,b,x,y  \in R, a \neq 0$
 		\begin{flalign*}
-			& \overset{\text{für b einsetzen}}{\Rightarrow} ax = ay & \\
+			& \Rightarrow ax = b \land ay=b & \\
+			& \Leftrightarrow ax = b \land b = ay & \\
+			& \overset{Einsetzen}{\Rightarrow} ax = ay & \\
+			& \overset{a \neq 0}{\Leftrightarrow} 1\cdot x = 1\cdot y & \\
 			& \Leftrightarrow x=y & \square
 		\end{flalign*}
 		Wäre $ a=0$, führe die Annulierungsregel zu $ 0 = 0 $.
 	\end{itemize}
 	\newpage		
-	\section{Übungsblatt1, Aufgabe 2:, 4 Punkte, \GruppeA}
-	\begin{flalign*}
-		a.) & \abs{\frac{x+4}{x-2}} < x, x \in R & \\
+	\section{Übungsblatt 3, Aufgabe 2:, 4 Punkte, \GruppeA}
+	\begin{enumerate}
+		\item
+		a)
+		\begin{flalign*}
+		& \abs{\frac{x+4}{x-2}} < x, x \in R & \\
+		& \text{Durch Nachdenken: } & \\
 		& \text{Fall 1: } x = 2: \text{Division durch 0}, L=\{\} & \\
 		& \text{Fall 2: } x < 2: \text{Negativer Divisor} \ldots & \\
 		& \text{Fall 2.1: } x < 2 ~ \land ~ x = -4 : \text{Negativer Divisor, 0 Dividend}, \nleq x, L=\{\} & \\
@@ -442,43 +449,76 @@ Stand 2015-10-29: Noch nicht bekannt gegeben
 		& \text{Fall 2.2: } x < 2 ~ \land ~ x > -4 : \text{Negativer Divisor, positiver Dividend}, \nleq x, L=\{\} &\\
 		& \text{Fall 3: } x > 2: \text{positiver Divisor \ldots} & \\
 		& \text{Fall 3.1: } x > 2 ~ \land ~ x < -4:\text{\Lightning}, L=\{\} & \\
-		& \text{Fall 3.2: } x > 2 ~ \land ~ x = -4:, \text{\Lightning}, L=\{\} & \\
-		& \text{Fall 3.3: } x > 2 ~ \land ~ x > -4: \text{positiver Divisor, positiver Divident}, < x, L=\{x|x > 4\}& \\
-		& \Rightarrow L=\{x \in R |x > 4\} %& \\
-%		& \text{oder} & \\
-%		& \text{Fall 1: Sei } \abs{\frac{x+4}{x-2}} < x  &\\
-%		& \Rightarrow \frac{x+4}{x-2} < x & \\
-%		& \Leftrightarrow x+4 > x(x-2) & \\
-%		& \Leftrightarrow 0 > x^2-2x-x-4 & \\
-%		& \Leftrightarrow 0 > x^2-3x-4 & \\
-%		& \Leftrightarrow 0 > (x+1)(x-4) &\\
-%		& \text{Linke Seite (Erster Term <1, zweiter Term kleiner 0) insgesamt kleiner 0, also linke Seite \Lightning rechte Seite } 
-	\end{flalign*}
-	\begin{flalign*}
-		b.) & \abs{x-a}+\abs{x-b}\leq b-a, \text{ wobei } a \leq b & \\
-		& \text{Fall 1: } a \leq b < 0 & \\
-		& \text{Fall 1.1: } a = b < 0 & \\
-		& \Rightarrow x+a + x+a \leq 0 & \\
-		& \Leftrightarrow 2x \leq 2a & \\
-	\end{flalign*}
+		& \text{Fall 3.2: } x > 2 ~ \land ~ x = -4: \text{\Lightning}, L=\{\} & \\
+		& \text{Fall 3.3: } x > 2 ~ \land ~ x > -4: \text{positiver Divisor, positiver Dividend}, < x, L=\{x|x > 4\}& \\
+		& \Rightarrow L=\{x \in R |x > 4\} & \\
+		& \text{Andere Beobachtung: } & \\
+		& \frac{\abs{x+4}}{\abs{x-2}} < x, x \in R & \\
+		& \text{Diese Division hat immer positives Ergebnis}
+		%		& \text{oder} & \\
+		%		& \text{Fall 1: Sei } \abs{\frac{x+4}{x-2}} < x  &\\
+		%		& \Rightarrow \frac{x+4}{x-2} < x & \\
+		%		& \Leftrightarrow x+4 > x(x-2) & \\
+		%		& \Leftrightarrow 0 > x^2-2x-x-4 & \\
+		%		& \Leftrightarrow 0 > x^2-3x-4 & \\
+		%		& \Leftrightarrow 0 > (x+1)(x-4) &\\
+		%		& \text{Linke Seite (Erster Term <1, zweiter Term kleiner 0) insgesamt kleiner 0, also linke Seite \Lightning rechte Seite } 
+		\end{flalign*}
+		b)
+		\begin{flalign*}
+		\abs{x-a}+\abs{x-b}\leq b-a, \text{ wobei } a \leq b & 
+		\end{flalign*}
+		Zum Verstädnis: Der Absolutbetrag ist ein Abstandsbegriff. Veranschaulicht in der Euklidischen Form sei $|x-a| =  \overline{XA} \text{ und } |x-b| =  \overline{XB} $. Vorgegeben ist $ a \leq b $ , so ist der Abstand $ b-a $ mindestens 0 bis $\overline{BA}$ groß. \\
+		Zu zeigen ist $ \abs{x-a}+\abs{x-b}\leq b-a, \text{ wobei } a \leq b $. Für gültige x, ist die Summe der Abstände $ \overline{XA} \text{ und  } \overline{XB}$ nicht größer als der Abstand $\overline{BA}$. Auf der Zahlengerade $R$ liegt  $x$ stets zwischen $a$ und $b$: $ a \leq x \leq b $. Infolge dessen ist lautet die Antwort:\\ $L=\{x \in R| a \leq x \leq b\}$.
+		\item a)
+		\begin{flalign*}
+			& \frac{x}{y} + \frac{y}{x} \geq 2 \text{ für alle } x,y \in R, x, y > 0 & \\
+			& \Leftrightarrow \frac{x^2 + y^2}{yx} \geq 2 & \\
+			& \overset{\text{Nullerweiterung}}{\Leftrightarrow} \frac{x^2-2xy+y^2+2xy}{xy} \geq 2 & \\
+			& \Leftrightarrow \frac{(x-y)^2}{xy} + \frac{2xy}{xy} \geq 2 & \\
+			& \Leftrightarrow \frac{(x-y)^2}{xy} + \frac{2xy}{xy} \geq \frac{2xy}{xy} & \\
+			& \Leftrightarrow \frac{(x-y)^2}{xy} \geq 0 & \square
+		\end{flalign*}
+		Der Dividend ist wegen der Quadratur nie negativ für alle $x,y > 0 ~\in R$, auch für $ y > x $. Damit ist die rechte Seite nie negativ und stets $\geq 0 $.\par
+		b)\par
+		Zu reellen Zahlen $x,y$ mit $x < y$ gibt es eine reelle Zahl $z$, so dass $ x < z < y $ gilt.
+		\begin{flalign*}
+			& \overset{Geradengleich.}{\Rightarrow} x < x + \frac{y-x}{2} = \frac{2x}{x} + \frac{y-x}{2} = \frac{2x+y-x}{2}= \frac{x+y}{2} < y & \\
+			& \Rightarrow z = x + \frac{y-x}{2} = \frac{x+y}{2} & \square \\
+		\end{flalign*}
+	\end{enumerate}
 	\newpage		
-	\section{Übungsblatt1, Aufgabe 3:, 4 Punkte, \GruppeA}
+	\section{Übungsblatt 3, Aufgabe 3:, 4 Punkte, \GruppeA}
 	
 	\begin{enumerate}
 		\item 
 		\begin{flalign*}
 			a.) & \frac{1}{x-\abs{x+1} < 2} & \\
 			b.) & \abs{\abs{x-1} - 4} < 2  & \\
+			& \text{Fall 1: } x<1 & \\
+			& \abs{|x-1|-4} = \abs{|x+1|-4} = \abs{-3\cdot (-x)} < 2 & \\
+			& \text{Unterfall: } x<-3 & \\
+			& \abs{x+3}=-x\cdot < 2 &\\
+			& \Rightarrow L_1=\{x \in R | -5 < x < -3 \} &\\
+			& \text{Unterfall: } -3 \leq x & \\
+			& \abs{x+3}=-x + 3 < 2 \Leftrightarrow x < -1 &\\
+			& \abs{x+3}=-x + 3 < 2 &\\
+			& \Rightarrow L_2=\{x \in R | -3 \leq x < -1 \} &\\
+			& \text{Fall 2: } x \geq 1 & \\
+			& \abs{|x-1|-4} = \abs{x-1-4} = \abs{x-4} <2 &\\
 		\end{flalign*}
 		\item 
 		\begin{flalign*}
 			a.) & \frac{r}{1+r} < \frac{s}{1+s} \text{, für } r,s \in R \text{ mit } 0 \leq r < s & \\
-			b.) & \frac{x+y}{1+\abs{x+y}} \leq \frac{\abs{x}}{1+\abs{x} + \frac{\abs{y}}{1+\abs{y}}} , \text{für alle } x,y \in R
+			& \Leftrightarrow r (1+s) < s (1+r) & \\
+			& \Leftrightarrow r+rs < s+rs & \\			
+			& \Leftrightarrow r < s & \square\\			
+			b.) & \frac{x+y}{1+\abs{x+y}} \leq \frac{\abs{x}}{1+\abs{x}} + \frac{\abs{y}}{1+\abs{y}ß} , \text{für alle } x,y \in R
 		\end{flalign*}
 	\end{enumerate}
 	
 	\newpage		
-	\section{Übungsblatt1, Aufgabe 4:, 4 Punkte, \GruppeA}
+	\section{Übungsblatt 3, Aufgabe 4:, 4 Punkte, \GruppeA}
 	
 
 
