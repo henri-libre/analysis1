@@ -25,13 +25,13 @@
 \newcommand \GruppeA {Henri Libre}
 
 	\tableofcontents
-	\newpage
 	
-	\chapter{Vorwort}
+	\newpage
+	\setcounter{chapter}{-1}
+\chapter{Vorwort}
 	Dieses Dokument findest du auf github.com unter: \href{https://github.com/henri-libre/analysis1}{https://github.com/henri-libre/analysis1}. Du darfst das Dokument nutzen, erweitern und verbreiten. Maintainer des Dokumentes erreichst du entweder dort oder per E-Mail an \href{analysis1istgeil@nanooq.org}{analysis1istgeil@nanooq.org}. Für die Korrektheit des Dokumentes ist entweder keiner oder du verantwortlich. Die URL der Veranstaltung an sich lautet: \href{https://analysis3.wordpress.com/analysis-i-ws-1516/uebungen-zu-analysis-i-wise-1516/}{https://analysis3.wordpress.com/analysis-i-ws-1516/uebungen-zu-analysis-i-wise-1516/}
 	
-	\setcounter{chapter}{1}
-\chapter*{Übungsblatt 1}
+\chapter{Übungsblatt 1}
 	
 	Das entsprechende Übungsblatt befindet sich im Anhang \ref{uebungsblatt1} \footnote{\href{https://analysis3.files.wordpress.com/2015/08/blatt1.pdf}{https://analysis3.files.wordpress.com/2015/08/blatt1.pdf}}.
 
@@ -262,7 +262,9 @@ Der Fehler in dem Induktionsverwis liegt im Folgenden: Innerhalb des Induktionss
 
 Stand 2015-10-29: Noch nicht bekannt gegeben
 
-\chapter*{Übungsblatt 2}
+
+
+\chapter{Übungsblatt 2}
 
 	Das entsprechende Übungsblatt befindet sich im Anhang \ref{uebungsblatt2} \footnote{\href{https://analysis3.files.wordpress.com/2015/08/blatt-2.pdf}{https://analysis3.files.wordpress.com/2015/08/blatt-21.pdf}}.
 	
@@ -411,7 +413,7 @@ Stand 2015-10-29: Noch nicht bekannt gegeben
 		und das sieht aus wie $(n^1+1)^{p+1}$ - grob.
 	\end{itemize}
 
-	\chapter*{Übungsblatt 3}
+\chapter{Übungsblatt 3}
 		Das entsprechende Übungsblatt befindet sich im Anhang \ref{uebungsblatt1} \footnote{\href{https://analysis3.files.wordpress.com/2015/08/blatt-3.pdf}{https://analysis3.files.wordpress.com/2015/08/blatt-3.pdf}}.
 
 	\newpage		
@@ -434,7 +436,8 @@ Stand 2015-10-29: Noch nicht bekannt gegeben
 		\end{flalign*}
 		Wäre $ a=0$, führe die Annulierungsregel zu $ 0 = 0 $.
 	\end{itemize}
-	\newpage		
+	\newpage	
+		
 	\section{Übungsblatt 3, Aufgabe 2:, 4 Punkte, \GruppeA}
 	\begin{enumerate}
 		\item
@@ -479,13 +482,20 @@ Stand 2015-10-29: Noch nicht bekannt gegeben
 			& \Leftrightarrow \frac{(x-y)^2}{xy} + \frac{2xy}{xy} \geq \frac{2xy}{xy} & \\
 			& \Leftrightarrow \frac{(x-y)^2}{xy} \geq 0 & \square
 		\end{flalign*}
-		Der Dividend ist wegen der Quadratur nie negativ für alle $x,y > 0 ~\in R$, auch für $ y > x $. Damit ist die rechte Seite nie negativ und stets $\geq 0 $.\par
+		Der Dividend ist wegen der Quadratur nie negativ für alle $x,y > 0 ~\in R$, auch für $ y > x $. Damit ist die linkeF Seite nie negativ und stets $\geq 0 $.\par
 		b)\par
 		Zu reellen Zahlen $x,y$ mit $x < y$ gibt es eine reelle Zahl $z$, so dass $ x < z < y $ gilt.
 		\begin{flalign*}
 			& \overset{Geradengleich.}{\Rightarrow} x < x + \frac{y-x}{2} = \frac{2x}{x} + \frac{y-x}{2} = \frac{2x+y-x}{2}= \frac{x+y}{2} < y & \\
 			& \Rightarrow z = x + \frac{y-x}{2} = \frac{x+y}{2} & \square \\
 		\end{flalign*}
+		Anmerkung: Satz 4 bis 6 in der Vorlesung vom 10.11.2015 behandelt die Abzählbarkeit der Rationalen Zahlen. Ist ein weiterer Beweis möglich? Aus dem Kopf:
+		\begin{flalign*}
+			& \text{Indirekter Beweis vorhanden: Jeder Menge M natürlicher Zahlen hat ein kleinstes Element} & \\
+			& x<q<z & \\
+			& x < \frac{m}{n} \overset{\text{Nullerweiterung}}{=} \frac{m-1+1}{n} = \frac{m-1}{n} + \frac{1}{n} < z & 
+ 		\end{flalign*}
+ 		Wähle $1/n$ so, dass gilt: $ x > \frac{m-1}{n}$ und $ x < \frac{m-1}{n} + \frac{1}{n}$.
 	\end{enumerate}
 	\newpage		
 	\section{Übungsblatt 3, Aufgabe 3:, 4 Punkte, \GruppeA}
@@ -493,27 +503,77 @@ Stand 2015-10-29: Noch nicht bekannt gegeben
 	\begin{enumerate}
 		\item 
 		\begin{flalign*}
-			a.) & \frac{1}{x-\abs{x+1} < 2} & \\
-			b.) & \abs{\abs{x-1} - 4} < 2  & \\
-			& \text{Fall 1: } x<1 & \\
-			& \abs{|x-1|-4} = \abs{|x+1|-4} = \abs{-3\cdot (-x)} < 2 & \\
-			& \text{Unterfall: } x<-3 & \\
-			& \abs{x+3}=-x\cdot < 2 &\\
-			& \Rightarrow L_1=\{x \in R | -5 < x < -3 \} &\\
-			& \text{Unterfall: } -3 \leq x & \\
-			& \abs{x+3}=-x + 3 < 2 \Leftrightarrow x < -1 &\\
-			& \abs{x+3}=-x + 3 < 2 &\\
-			& \Rightarrow L_2=\{x \in R | -3 \leq x < -1 \} &\\
+			\text{a)} & \frac{1}{x+\abs{x+1}}< 2 & \\
+			& \text{Fall 1: } x \leq -1 & \\
+			& ~~~ \frac{1}{x+\abs{x+1}} = \frac{1}{x+\abs{x+1}} < 2 & \\
+			& ~~~ \Leftrightarrow -\frac{1}{1} < 2 & \\
+			& ~~~ L_1=\{x\in R| x \leq 1: (-\infty, -1)\}& \\
+			& \text{Fall 2: } x > -1 & \\
+			& ~~~ \frac{1}{x+\abs{x+1}} = -\frac{1}{2x+1} < 2 & \\
+			& ~~~ \Leftrightarrow \frac{1}{2x+1} < 2 & \\
+			& ~~~ \Leftrightarrow 1 > 4x + 2 & \\
+			& ~~~ \Leftrightarrow -1 > 4x & \\
+			& ~~~ \Leftrightarrow x < - \frac{1}{2} & \\
+			& ~~~ L_2=\{x\in R| -1 < x < -\frac{1}{2} \} & \\
+			& \text{Fall 3: } x > -\frac{1}{2} & \\
+			& ~~~ \frac{1}{2x+1} < 2 & \\
+			& ~~~ \Leftrightarrow 1 < 4x+2 & \\
+			& ~~~ \Leftrightarrow -1 < 4x & \\
+			& ~~~ \Leftrightarrow -\frac{1}{4} < x & \\
+			& ~~~ L_3={x\in R|-\frac{1}{4}<x}& \\
+			& L = L_1 \cup L_2 \cup L_3 = (-\infty, -\frac{1}{2}) \cup (\frac{1}{4}, \infty) 
+			\end{flalign*}
+			\begin{flalign*}
+			\text{b)} & \abs{\abs{x-1} - 4} < 2  & \\
+			& ~~~ \text{Fall 1: } x<1 & \\
+			& ~~~ \abs{|x-1|-4} = \abs{|x+1|-4} = \abs{-3\cdot (-x)} < 2 & \\
+			& ~~~ \text{Unterfall 1: } x<-3 & \\
+			& ~~~ ~~~ \abs{x+3}=-x\cdot < 2 &\\
+			& ~~~ ~~~ \Rightarrow L_1=\{x \in R | -5 < x < -3 \} &\\
+			& ~~~ \text{Unterfall 2: } -3 \leq x & \\
+			& ~~~ ~~~ \abs{x+3}=-x + 3 < 2 \Leftrightarrow x < -1 &\\
+			& ~~~ ~~~ \abs{x+3}=-x + 3 < 2 &\\
+			& ~~~ ~~~ \Rightarrow L_2=\{x \in R | -3 \leq x < -1 \} &\\
+			& ~~~ L_{1,2}=\{x\in R| -5<x<-1\} = (-5,1) & \\
 			& \text{Fall 2: } x \geq 1 & \\
-			& \abs{|x-1|-4} = \abs{x-1-4} = \abs{x-4} <2 &\\
+			& \abs{|x-1|-4} = \abs{x-1-4} = \abs{x-4} = \abs{x-5}<2 &\\
+			& ~~~ \text{Unterfall 3: } x < 5 &\\
+			& ~~~ ~~~ \abs{x-5} = 5-x < 2 & \\
+			& ~~~ ~~~ \Leftrightarrow x > 3 & \\
+			& ~~~ ~~~ L_3=(3,5)&\\
+			& ~~~ \text{Unterfall 4:} x \geq 5 & \\
+			& ~~~ ~~~ \abs{x-5} = x - 5 < 2 & \\
+			& ~~~ ~~~ \Leftrightarrow x < 7 & \\
+			& ~~~ ~~~  L_4 = [5,7] & \\
+			& ~~~ L_{3,4}=(3,7) & \\
+			& L=L_{1,2} \cup L_{3,4}=(-5,-1)\cup(3,7)
 		\end{flalign*}
 		\item 
 		\begin{flalign*}
-			a.) & \frac{r}{1+r} < \frac{s}{1+s} \text{, für } r,s \in R \text{ mit } 0 \leq r < s & \\
+			\text{a)} & \frac{r}{1+r} < \frac{s}{1+s} \text{, für } r,s \in R \text{ mit } 0 \leq r < s & \\
 			& \Leftrightarrow r (1+s) < s (1+r) & \\
 			& \Leftrightarrow r+rs < s+rs & \\			
-			& \Leftrightarrow r < s & \square\\			
-			b.) & \frac{x+y}{1+\abs{x+y}} \leq \frac{\abs{x}}{1+\abs{x}} + \frac{\abs{y}}{1+\abs{y}ß} , \text{für alle } x,y \in R
+			& \Leftrightarrow r < s & \square\\	
+		\end{flalign*}
+		\begin{flalign*}
+			\text{b)} & \frac{x+y}{1+\abs{x+y}} \leq \frac{\abs{x}}{1+\abs{x}} + \frac{\abs{y}}{1+\abs{y}ß} , \text{für alle } x,y \in R & \\
+			& \text{Fall 1: } x,y > 0, \text{Einsetzen: } \abs{x}=x, \abs{y}=y: \frac{x+y}{1+x+y} \leq \frac{x}{1+x}+\frac{y}{1+y} & \\	
+			& ~~~ \Leftrightarrow \frac{x+y}{1+x+y} \leq \frac{x+xy+y+xy}{1+y+x+xy} & \\
+			& ~~~ \Leftrightarrow (x+y)(1+y+x+xy) \leq (x+2xy+y)(1+x+y) &\\
+			& ~~~ \Leftrightarrow x + xy + x^2 + x^2y + y + y^2 + xy + xy^2 & \\
+			& ~~~ ~~~ \leq x+x^2 + xy + 2xy + 2x^2y + 2xy^2 + y + xy + y^2 & \\	
+			& ~~~ 0 \leq 2xy + x^2y + xy^2 & \\
+			& ~~~ 0 \leq xy(2+x+y) & \square &\\
+			& \text{Fall 2:} x,y < 0, \text{Einsetzen: } \abs{x+y} = \abs{x} + \abs{y}; x+y; x=-x,~y=-y: & \\
+			& ~~~ \frac{-x-y}{1+\abs{x+y}} \leq \text{siehe Fall 1 } & \\
+			& ~~~ \Leftrightarrow (-1)\frac{x+y}{1+\abs{x+y}} \leq \text{siehe Fall 1} & \\
+			& ~~~ \Leftrightarrow (-1)\cdot 0 \leq xy(2+x+y) & \square \\
+			& \text{Fall 3: } x,y = 0: 0\leq 0 & \square \\
+			& \text{Fall 4: \enquote{Symmetrie}: x und y vertauschbar: } & \\
+			& \frac{x+y}{1+\abs{x+y}} = \frac{y+x}{1+\abs{x+y}} \leq \frac{\abs{x}}{1+\abs{1+x}}+ \frac{\abs{y}}{1+\abs{1+y}} & \\
+			& =  \frac{\abs{y}}{1+\abs{1+y}} +  \frac{\abs{x}}{1+\abs{1+x}} & \\
+			& \Rightarrow x\leq 0 \lor y \geq 0 & \\
+			& \Leftrightarrow x \geq 0 \lor y \leq 0
 		\end{flalign*}
 	\end{enumerate}
 	
@@ -522,10 +582,13 @@ Stand 2015-10-29: Noch nicht bekannt gegeben
 	
 
 
+
 \appendices
 	\chapter{}
 	\section{Übungsblatt 1}\label{uebungsblatt1}
 	\includepdf[pages=-]{blatt1}
 	\section{Übungsblatt 2}\label{uebungsblatt2}
 	\includepdf[pages=-]{blatt2}
+	\section{Übungsblatt 3}\label{uebungsblatt3}
+	\includepdf[pages=-]{blatt3}
 \end{document}
