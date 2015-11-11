@@ -22,7 +22,7 @@
 
 \begin{document}
 
-\newcommand \GruppeA {Henri Libre}
+\newcommand \GruppeA {henrilibre}
 
 	\tableofcontents
 	
@@ -579,10 +579,17 @@ Stand 2015-10-29: Noch nicht bekannt gegeben
 	
 	\newpage		
 	\section{Übungsblatt 3, Aufgabe 4:, 4 Punkte, \GruppeA}
-	
-
-
-
+		\begin{flalign*}
+			& \text{a): } \left\{x+\frac{1}{x}, \frac{1}{2} < x \leq 2 \right\} &
+		\end{flalign*}
+			Beschränkt nach unten und oben, $\inf = \frac{1}{2},\max = 2$\\
+			Elemente dieser Teilmenge $\in R$ sind $ \frac{1}{2} < x \leq 2$, damit ist die Menge nicht-leer. Die Menge ist nach unten durch $ \frac{1}{2} < x $ und nach oben durch $ x = 2 $ beschränkt. Damit ist die Menge beschränkt. Die Supremumseigenschaft von $R$ besagt, dass jede nach oben (unten) beschränkte nicht-leere Menge $M \subset R$ ein Supremum (Infimum) besitzt. Das Infimum, die höchste untere Schranke ist $\frac{1}{2}$. Dies ist nicht das Minimum, sondern  wegen der Vollständigkeit von $R$: dicht dran. Das Maximum ist $x=2$, dies ist nicht nur das Supremum, sondern auch das Maximum, es gibt genau diese eine Zahl als niedrigste obere Schranke.\\
+		\begin{flalign*}
+			& \text{b): } \left\{ 2^m+\frac{1}{n},~m,~n \in N\setminus\{0\} \right\} & 
+		\end{flalign*}
+			Beschränkt nach unten, $\inf = 2$\\ 
+			Diese Teilmenge ist $\supset R$, damit ist sie vorerst, wie $R$ eine unendliche Menge. Allerdings sind die in der Teilmenge enthaltenen Elemente definiert durch $2^m+\frac{1}{n}$. Die Menge ist nicht leer, zum Beispiel sei $m,~n=1$. Weil $m,~n \in N \setminus \{0\}$, folgt daraus Beschränktheit für die Anzahl der Elemente der Teilmenge. \\
+			Zuerst wird die untere Schranke betrachtet: Das kleinste Element erhält man, wenn man kleinstmögliches $m$ und größtmögliches $n$ wählt. Da diese aus $N$ gewählt werden müssen und $N$ selber eine unendliche Menge ist (Nach oben unbeschränkt, wegen der Peano-Axiome), fällt es schwer für $n$ das Maximum von $N$ zu wählen. Es gibt keins. Daraus folgt, dass man für die Teilmenge kein kleinstes Element festlegen kann, weil $\frac{1}{n}$ immer noch kleiner gewählt werden kann. Als oberste untere Schranke dient hier $2^m = 2$ mit $m=1$, dem Minimum aus $N \setminus \{0\}$. Damit ist die Teilmenge nach unten beschränkt. Die obige Argumentation, dieses Mal für die Wahl von $m$, führt zu dem Ergebnis, dass man kein größtes Element festlegen kann, die Menge ist nach oben unbeschränkt.
 \appendices
 	\chapter{}
 	\section{Übungsblatt 1}\label{uebungsblatt1}
